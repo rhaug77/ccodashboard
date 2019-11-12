@@ -2,7 +2,10 @@
 # Continuous Cloud Optimization Power BI Dashboard
 
 ## Content
-
+- [Version 6.0 updates](README.md#version-60-updates)
+- [Version 5.4 updates](README.md#version-54-updates)
+- [Version 5.3 updates](README.md#version-53-updates)
+- [Version 5.2 new features and updates](README.md#version-52-new-features-and-updates)
 - [Overview](README.md#overview)
 - [List of resources](README.md#List-of-resources)
 - [CCO Dashboard report pages](README.md#CCO-Dashboard-report-Pages)
@@ -10,6 +13,66 @@
 - [Call for Contribution](README.md#Call-for-Contribution)
 -------------------------------
 
+## **Version 6.0** Updates
+**Azure Resources Usage and Limits Page** ***<span style="color:green"><sup>NEW</sup></span>***
+- List Compute, Networking and Storage Azure Resources Usage and limits per subscription and region
+
+**Azure Idle Resources identification Page** ***<span style="color:green"><sup>NEW</sup></span>***
+- List Idle Public IPs, Network Interfaces and Disks per Subscription
+## **Version 5.4** Updates
+- NSGs bug fixing when NSGs configuration are empty
+- Bug fixing number of VNETs per subscription
+- Bug Fixing duplicated VNET Peerings count
+
+## **Version 5.3** Updates 
+- Bug fixing issues with ASC Network Recommendations table load from docs.microsoft.com
+- Incorporating icons new feature from PowerBI Desktop
+
+## **Version 5.2:** New features and updates
+
+**Overview Page**
+- New Resource Groups tags counter
+- New Subscriptions, RG and Tags Search option
+  
+**Tags Overview** ***<span style="color:green"><sup>NEW</sup></span>***
+- Filter Resource Groups and Resources with Tags
+- Filter Resource Groups and Resources without Tags
+- Number of tagged resources by resource type
+- Number of untagged resources by resource type
+- Search option for Resource Group and Resources tags
+
+**Azure Advisor**
+- Performance improvements and bugs fixes
+- Simplified recommendations images
+- Security recommendations
+
+**Azure Security Center**
+- Performance improvements and bugs fixes
+- Simplified recommendations images
+- Enhanced recommendation types filtering
+
+**Security Alerts**
+- Performance improvements and bugs fixes
+- Simplified recommendations images
+
+**Compute**
+- Performance improvements and bugs fixes
+
+**Networking**
+- Performance improvements and bugs fixes
+
+**NSGs** ***<span style="color:green"><sup>NEW</sup></span>***
+- NSG rules overview across subscriptions (VMs and Subnets)
+- Filter NSGs by subscription, Resource Group, NSG name, Tags, Direction and Ports
+
+**RBAC**
+- Performance improvements and bugs fixes
+- Filtering RBAC permissions by object type (Users or Groups)
+- Search option for Resource Group and users
+
+**RBAC Service Principals** ***<span style="color:green"><sup>NEW</sup></span>***
+- Filtering RBAC permissions by Service Principal Type
+- Search option for Users and Resource Groups
 
 ## Overview
 The Continuous Cloud Optimization Power BI Dashboard (referred as CCO Dashboard here after) is a Power BI Dashboard developed using Power Query M language that pulls information directly from different Azure and Graph REST APIs. It presents the information in a simplified format to track potential recommendations from Azure Advisor or Azure Security Center allowing you to filter by subscriptions, resources groups, tags or particular resources.
@@ -27,25 +90,33 @@ This project includes the following resources:
     - ***CCODashboard-AKS folder*** has the add-on report to monitor Azure Kubernetes Services.
 
 ## CCO Dashboard report pages
-The version 4.0 of the CCO Power BI Dashboard includes 7 report pages. You will be able to navigate, filter and report the following information:
+The version 6.0 of the CCO Power BI Dashboard includes 12 report pages. You will be able to navigate, filter and report the following information:
 - Page 1: Overview
-- Page 2: Azure Advisor Recommendations
-- Page 3: Azure Security Center Task recommendations
-- Page 4: Azure Security Center Alerts
-- Page 5: Azure Networking information
+- Page 2: Tags Overview
+- Page 3: Azure Advisor Recommendations
+- Page 4: Azure Security Center Task recommendations
+- Page 5: Azure Security Center Alerts
 - Page 6: Azure Compute information
-- Page 7: Azure RBAC permissions
+- Page 7: Azure Networking information
+- Page 8: Network Security Groups
+- Page 9: Azure RBAC permissions
+- Page 10: Azure Service Principals RBAC permissions
+- Page 11: IaaS Usage and Limits
+- Page 12: IaaS Idle Resources
   
 You can find more details about each page on the [Deployment Guide](/install/DeploymentGuide.md) file
 
 ## CCO Dashboard AKS add-on report pages
 
-The version 4.0 of the CCO Power BI Dashboard AKS add-on includes the following information
+The version 5.0 of the CCO Power BI Dashboard AKS add-on includes the following information
 
-- Azure Kubernetes Clusters
-- Azure Container Images running on AKS Clusters
-- Azure Container Registries
+- Azure Kubernetes Clusters information
 - Nodes, Pods, Containers status from Azure Log Analytics
+- Azure Container Images (and source repositories) running on AKS Clusters ***<span style="color:green"><sup>NEW</sup></span>***
+- Security recommendations to apply from Azure Security Center ***<span style="color:green"><sup>NEW</sup></span>***
+- Service principals (showing assigned RBAC Roles) with cluster permissions ***<span style="color:green"><sup>NEW</sup></span>***
+- Azure Container Intances information ***<span style="color:green"><sup>NEW</sup></span>***
+- Improved API Rest calls ***<span style="color:green"><sup>NEW</sup></span>***
 
 ## Call for contribution
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
